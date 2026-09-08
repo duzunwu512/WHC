@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>API大全</title>
+</head>
+<link rel="stylesheet" href="style/style.css"/>
+<style type="text/css">
+    
+</style>
+<body>
+    <div class="tool_content">
+        <form class="ui form" id="search_form" action="https://www.baidu.com/s" target="_blank">
+		  <!--<div class="field">
+			 <input style="width: 70%;height: 35px;color: #016936;font-size: 20px;    border: 2px solid #c4c7ce;    border-radius: 10px;    padding: 3px 0 3px 14px;" type="text" name="wd" placeholder="搜索内容">
+		  </div>-->
+		  <table style="width: 90%;border-spacing: 0px; margin-top:5px;">
+			  <tr>
+				<td>
+					<div class="field">
+						<input id="search_field" style="width: 95%;height: 35px;color: #016936;font-size: 20px;border: 2px solid #c4c7ce; border-radius: 10px; padding: 3px 0 3px 14px;" type="text" name="wd" placeholder="搜索内容">
+						<input style="" type="hidden" name="lang" value="en">
+					</div>
+				</td>
+				<td>
+					<div id="AlphabetIndex_search" class="">
+						<div class="btn-group">
+							<a href="javaScript:void(0);" id="baidu_search" class="btn translatebtn">百度搜索</a>
+							<a href="javaScript:void(0);" id="biying_search" class="btn translatebtn">必应搜索</a>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			  </tr>		
+		  </table>
+		</form>
+		<form class="ui form" id="transform" action="https://fanyi.baidu.com/mtpe-individual/multimodal" target="_blank">
+		  <table style="width: 70%;border-spacing: 0px; margin-top:5px;">
+			  <tr>
+				<td>
+					<div class="field">
+						<input style="width: 95%;height: 35px;color: #016936;font-size: 20px;    border: 2px solid #c4c7ce;    border-radius: 10px;    padding: 3px 0 3px 14px;" type="text" id="transtext" name="query" placeholder="翻译字符串">
+						<input style="" type="hidden" name="lang" value="en">
+					</div>
+				</td>
+				<td>
+					<div id="AlphabetIndex_trans" class="">
+						<div class="btn-group">
+							<a href="javaScript:void(0);" id="baidu_transbtn" class="btn translatebtn">百度翻译</a>
+							<a href="javaScript:void(0);" id="youdao_transbtn" class="btn translatebtn">有道翻译</a>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</td>
+			  </tr>		
+		  </table>
+		</form>
+        <div class="main_div" style="">
+			<div id="tab_bar" class="btn-toolbar">
+				<div class="btn-group">
+					<a href="javascript:void(0);" class="btn tab-btn active" data-tab="tab_lj">岭酒一体化</a>
+					<a href="javascript:void(0);" class="btn tab-btn" data-tab="tab_gzl">GZL常用地址</a>
+					<a href="javascript:void(0);" class="btn tab-btn" data-tab="tab_zt">中台地址</a>					
+					<a href="javascript:void(0);" class="btn tab-btn" data-tab="tab_mdd">目的地</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div id="tab_gzl" class="tab-pane">
+				<p class='title'>GZL常用地址：</p>
+            <div>
+                <span><a target="_blank" href="http://10.3.41.35/jira/secure/Dashboard.jspa">JIRA</a></span>
+				<span><a target="_blank" href="http://10.3.41.106:9090/">Jenkins</a></span>				
+				<span><a target="_blank" href="http://sso.gzl.com.cn:8080/tbsp-sso-web/login?service=http://portal.gzl.com.cn:8089/tbsp-portal/cas">UAT-etravel</a></span>
+				<span><a target="_blank" href="https://sitetravel.gzl.cn/tbsp-sso-web/login?service=https://sitetravel.gzl.cn/tbsp-portal/cas">SIT-etravel</a></span>
+				<span><a target="_blank" href="https://etravel.gzl.cn/tbsp-sso-web/login?service=https://etravel.gzl.cn/tbsp-portal/cas">PRD_etravel</a></span>
+				<span><a target="_blank" href="http://10.3.41.72:8081/">UAT-DUBBO</a></span>
+				<span><a target="_blank" href="http://10.3.41.110:8081/">SIT-DUBBO</a></span>
+				<span><a target="_blank" href="http://10.3.41.70:8081/">STD-DUBBO</a></span>
+				<span><a target="_blank" href="http://192.168.0.190:8081">PRD-DUBBO</a></span>
+				<span><a target="_blank" href="http://192.169.1.21:8081">PRD_C_DUBBO</a></span>
+				<span><a target="_blank" href=""></a></span>				
+            </div>
+			<div>
+				<span><a target="_blank" href="http://10.3.41.109:8080/xxl-job-admin/toLogin">UAT_XXL-JOB</a></span>
+				<span><a target="_blank" href="http://192.168.0.93:9090/xxl-job-admin/toLogin">PRD_XXL-JOB</a></span>
+				<span><a target="_blank" href="http://10.3.41.96:8070/signin">UAT_APOLLO</a></span>
+				<span><a target="_blank" href="http://192.168.0.93:8070/signin">PRD_APOLLO</a></span>
+				<span><a target="_blank" href="http://10.3.41.118:8002/gitlab/">GZL-GITLAB</a></span>
+				<span><a target="_blank" href="https://gzl.21tb.com/login/login.init.do">在线学习平台</a></span>
+				<span><a target="_blank" href="https://uatgzlsso.gzl.cn/gzl-sso/">GZL-SSO</a></span>
+				<span><a target="_blank" href="http://10.3.41.73:8088">UAT-Sentinel</a></span>
+				<span><a target="_blank" href="http://10.3.41.70:8088">SIT-Sentinel</a></span>				
+            </div>
+			<div>
+				<span><a target="_blank" href="http://10.3.41.110:8088">STD-Sentinel</a></span>
+				<span><a target="_blank" href="http://192.168.0.216:8088">PRD-Sentinel</a></span>
+				<span><a target="_blank" href="https://sonar.gzl.cn">sonar</a></span>
+				<span><a target="_blank" href="http://10.3.41.103:5601/">PRD-kibana</a></span>
+				<span><a target="_blank" href="http://10.3.41.120:5601/">UAT-kibana</a></span>
+				<span><a target="_blank" href=""></a></span>				
+            </div>
+			</div>
+			<div id="tab_zt" class="tab-pane">
+				<p class='title'>中台地址：</p>
+            <div>
+                <span><a target="_blank" href="http://sso.lnholdings.cn:8080/cbsp-sso-web/login">UAT中台门户</a></span>
+				<span><a target="_blank" href="http://172.18.89.161:8080/browse/CCII-4">JIRA</a></span>
+				<span><a target="_blank" href="http://jenkins.lnholdings.cn:8081/">Jenkins</a></span>
+				<span><a target="_blank" href="http://10.170.139.102:8080/lnhd">gitlab</a></span>
+				</div>
+			</div>
+			<div id="tab_lj" class="tab-pane active">
+				<p class='title'>岭酒一体化：</p>
+              <div>
+                <span><a target="_blank" href="https://139.159.246.217/index/">华为云堡垒机</a></span>
+				<p>测试环境：</p>
+				<div>
+					<span><a target="_blank" href="https://tsicater.lnhotels.com/group/">餐饮集团登录</a></span>
+					<span><a target="_blank" href="https://tsicater.lnhotels.com/hotel/">餐饮门店后端</a></span>
+					<span><a target="_blank" href="https://tsicater.lnhotels.com//update">餐饮客户端下载</a></span>
+					<span><a target="_blank" href="https://tsi.lnhotels.com/">S&C宴会销售</a></span>
+					<span><a target="_blank" href="https://tsi.lnhotels.com/">CRS & CRM</a></span>	
+					<span><a target="_blank" href="https://i.ihotel.cn/main/KFBHT/FirstPage">iRoom</a></span>	
+				</div>
+				
+				<p>生产环境：</p>
+				<div>
+					<span><a target="_blank" href="https://icater.lnhotels.com/group/#/login">餐饮集团登录</a></span>
+					<span><a target="_blank" href="https://icater.lnhotels.com/hotel/#/login">餐饮门店后端</a></span>
+					<span><a target="_blank" href="https://icater.lnhotels.com//update">餐饮客户端下载</a></span>
+					<span><a target="_blank" href="https://i.lnhotels.com/">S&C宴会销售</a></span>
+					<span><a target="_blank" href="https://i.lnhotels.com/">CRS & CRM</a></span>	
+					<span><a target="_blank" href="https://i.ihotel.cn/main/KFBHT/FirstPage">iRoom</a></span>	
+					<span><a target="_blank" href="https://i.ihotel.cn/main/AIOTEL">iRoom住中服务</a></span>
+				</div>
+				
+              </div>
+			</div>
+			<div id="tab_mdd" class="tab-pane">
+				<p class='title'>目的地：</p>
+            <div>
+                <span><a target="_blank" href="https://dmsuat.gzl.cn/login?redirect=%2Findex">UAT门户</a></span>
+				
+            </div>
+			</div>
+        </div>
+        <div style="width: 1024px">			
+            <p>常用仓库地址：</p>
+            <div>
+                <span><a target="_blank" href="https://www.bootcdn.cn/">BootCDN 前端常CDN加速器</a></span>
+				<span><a target="_blank" href="https://mvnrepository.com/">mvnrepository</a></span>
+				<span><a target="_blank" href="https://search.maven.org/">maven.org</a></span>
+            </div>
+
+            <p>常用资料参考：</p>
+            <div>
+                <span><a target="_blank" href="https://www.runoob.com/">菜鸟教程</a></span>
+                <span><a target="_blank" href="https://www.w3school.com.cn/">w3school</a></span>
+                <span><a target="_blank" href="https://tool.ip138.com/git/">Git常用命令</a></span>
+                <span><a target="_blank" href="https://tool.ip138.com/http_code/">http状态码</a></span>
+                <span><a target="_blank" href="https://tool.ip138.com/httpheader/">HTTP头信息</a></span>
+                <span><a target="_blank" href="https://tool.ip138.com/linux/">Linux常用命令</a></span>
+                <span><a target="_blank" href="https://tool.ip138.com/specialsymbol/">特殊符号</a></span>
+            </div>
+
+            <p>常用在线工具：</p>
+                <span><a target="_blank" href="https://www.processon.com/">processon 思维导图</a></span>
+				<span><a target="_blank" href="https://app.diagrams.net/">draw.io</a></span>
+                <span><a target="_blank" href="https://www.axure.com/">Axure</a></span>
+                <span><a target="_blank" href="https://www.gitbook.com/">gitbook</a></span>
+                <span><a target="_blank" href="https://jsbin.com/?output">jsbin</a></span>
+				<span><a target="_blank" href="jsonformat/index.html">Json格式化</a></span>
+                <span><a target="_blank" href="tools/base64.html">base64编解码</a></span>
+                <span><a target="_blank" href="tools/htmlescape.html">HTML转义</a></span>
+                <span><a target="_blank" href="tools/urlencode.html">URL解码</a></span>
+                <span><a target="_blank" href="tools/unicode.html">Unicode解码</a></span>
+				<span><a target="_blank" href="https://www.doubao.com/chat/">豆包</a></span>
+            </div>
+
+        <p>所有API文档（按字母排序）：</p>
+        <div id="AlphabetIndex" class="btn-toolbar">
+                <div class="btn-group">
+                    <a href="#A" class="alpha_index btn">A</a>
+                    <a href="#B" class="alpha_index btn">B</a>
+                    <a href="#C" class="alpha_index btn">C</a>
+                    <a href="#D" class="alpha_index btn">D</a>
+                    <a href="#E" class="alpha_index btn">E</a>
+                    <a href="#F" class="alpha_index btn">F</a>
+                    <a href="#G" class="alpha_index btn">G</a>
+                    <a href="#H" class="alpha_index btn">H</a>
+                    <a href="#I" class="alpha_index btn">I</a>
+                    <a href="#J" class="alpha_index btn">J</a>
+                    <a href="#K" class="alpha_index btn">K</a>
+                    <a href="#L" class="alpha_index btn">L</a>
+                    <a href="#M" class="alpha_index btn">M</a>
+                    <a href="#N" class="alpha_index btn">N</a>
+                    <a href="#O" class="alpha_index btn">O</a>
+                    <a href="#P" class="alpha_index btn">P</a>
+                    <a href="#Q" class="alpha_index btn">Q</a>
+                    <a href="#R" class="alpha_index btn">R</a>
+                    <a href="#S" class="alpha_index btn">S</a>
+                    <a href="#T" class="alpha_index btn">T</a>
+                    <a href="#U" class="alpha_index btn">U</a>
+                    <a href="#V" class="alpha_index btn">V</a>
+                    <a href="#W" class="alpha_index btn">W</a>
+                    <a href="#X" class="alpha_index btn">X</a>
+                    <a href="#Y" class="alpha_index btn">Y</a>
+                    <a href="#Z" class="alpha_index btn">Z</a>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+        <a name="A"></a>
+        <div class="SourcesOfAlpha" name="A">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">A</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="https://tool.oschina.net/uploads/apidocs/ace/index.html?overview-summary.html" class="doc_href">Ace</a></li>
+                                <li class="api_href"><a target="_blank" href="https://apisix.apache.org/zh/" class="doc_href">apisix</a></li>
+                                <li class="api_href"><a target="_blank" href="https://developer.android.google.cn/?hl=zh-cn" class="doc_href">Android</a></li>
+                                <li class="api_href"><a target="_blank" href="https://activemq.apache.org/" class="doc_href">activemq</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.apolloconfig.com/#/zh/README" class="doc_href">美团Apollo</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Apache HTTP服务器</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">ASM字节码操作</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">AutoConf手册</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">AutoMake手册</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Axis2</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="B"></a>
+        <div class="SourcesOfAlpha" name="B">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">B</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href adisable"><a href="/apidocs/apidoc?api=bash-manual" class="doc_href adisable">Bash手册</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">BoneCP</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Boost</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.runoob.com/bootstrap4/bootstrap4-typography.html" class="doc_href">Bootstrap4 Web前端</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.w3school.com.cn/bootstrap5/index.asp" class="doc_href">Bootstrap 5 教程</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.bootcss.com/" class="doc_href">Bootstrap 中文网</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="C"></a>
+        <div class="SourcesOfAlpha" name="C">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">C</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Cacheonix</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.mchange.com/projects/c3p0/" class="doc_href">C3P0连接池</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/" class="doc_href">Commons 全项目</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/proper/commons-beanutils/javadocs/v1.9.4/apidocs/index.html" class="doc_href">Commons-Beanutils 1.9.4</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/proper/commons-cli/apidocs/index.html" class="doc_href">Commons-cli</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/proper/commons-codec/archives/1.15/apidocs/index.htmlc" class="doc_href">Commons-codec</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/proper/commons-collections/javadocs/api-4.4/index.html" class="doc_href">Commons-Collections 4.4</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/proper/commons-dbutils/apidocs/index.html" class="doc_href">Commons-Dbutils 1.7</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/proper/commons-digester/commons-digester-3.2/apidocs/" class="doc_href">Commons-Digester3.2</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/proper/commons-fileupload/javadocs/api-release/index.html" class="doc_href">Commons-Fileupload</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/proper/commons-io/apidocs/index.html" class="doc_href">Commons-IO</a></li>
+                                <li class="api_href"><a target="_blank" href="https://poi.apache.org/apidocs/5.0/" class="doc_href">Commons-POI</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/proper/commons-lang/apidocs/index.html" class="doc_href">Commons-Lang</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/proper/commons-logging/javadocs/api-1.1.3/index.html" class="doc_href">Commons-Logging</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/proper/commons-net/apidocs/index.html" class="doc_href">Commons-Net</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">cos文件上传</a></li>
+                                <li class="api_href"><a target="_blank" href="http://www.mb5u.com/tool/css2/" class="doc_href">CSS2参考手册</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.runoob.com/css/css-tutorial.html" class="doc_href">CSS 教程</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.w3school.com.cn/css/index.asp" class="doc_href">CSS 教程</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.runoob.com/css3/css3-tutorial.html" class="doc_href">CSS3 教程</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">cURL7.26</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">C语言参考文档</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">C++语言参考文档</a></li>
+								<li class="api_href"><a target="_blank" href="https://clickhouse.com/docs/zh" class="doc_href">clickhouse文档</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="D"></a>
+        <div class="SourcesOfAlpha" name="D">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">D</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="https://dubbo.apache.org/zh/docs/" class="doc_href">Dubbo参考手册</a></li>
+                                <li class="api_href"><a target="_blank" href="https://commons.apache.org/proper/commons-dbcp/" class="doc_href">DBCP连接池</a></li>
+                                <li class="api_href"><a target="_blank" href="https://docs.djangoproject.com/en/4.0/contents/" class="doc_href">Django文档</a></li>
+                                <li class="api_href"><a target="_blank" href="https://github.com/dom4j/dom4j" class="doc_href">Dom4j</a><a target="_blank" href="http://www.51gjie.com/java/744.html" class="doc_href">Dom4j教程</a></li>
+                                <li class="api_href"><a target="_blank" href="https://github.com/alibaba/druid" class="doc_href">Druid数据库连接池</a></li>
+								<li class="api_href"><a target="_blank" href="https://www.runoob.com/docker/docker-tutorial.html" class="doc_href">Docker 教程</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="E"></a>
+        <div class="SourcesOfAlpha" name="E">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">E</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="https://element.eleme.cn/#/zh-CN/component/installation" class="doc_href">Element-ui 手册</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.ehcache.org/documentation/#current_version" class="doc_href">EhCache</a></li>
+								<li class="api_href"><a target="_blank" href="https://www.elastic.co/guide/index.html" class="doc_href">ElasticSearch</a></li>
+								<li class="api_href"><a target="_blank" href="https://www.yuque.com/easyexcel" class="doc_href">EasyExcel教程</a></li>
+								<li class="api_href"><a target="_blank" href="https://github.com/alibaba/easyexcel" class="doc_href">EasyExcel git</a></li>
+								<li class="api_href"><a target="_blank" href="https://gitee.com/sushengren/easyword/" class="doc_href">easyword</a></li>
+								<li class="api_href"><a target="_blank" href="https://www.electronjs.org/zh/docs/latest/tutorial/quick-start" class="doc_href">Electron</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="F"></a>
+        <div class="SourcesOfAlpha" name="F">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">F</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="http://www.fontawesome.com.cn/" class="doc_href">Font Awesome</a></li>
+                                <li class="api_href"><a target="_blank" href="https://freemarker.apache.org/docs/api/index.html" class="doc_href">FreeMarker 2.3.31</a></li>
+								<li class="api_href"><a target="_blank" href="http://www.freemarker.net/" class="doc_href">FreeMarker介绍</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="G"></a>
+        <div class="SourcesOfAlpha" name="G">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">G</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">GCC4.7手册</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">glib</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">GNU-gsl参考手册</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">GNU-libc手册</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">GNU-libstdc++手册</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Go语言</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Grails</a></li>
+                                <li class="api_href"><a target="_blank" href="https://ifeve.com/google-guava/" class="doc_href">Guava中文教程</a></li>
+                                <li class="api_href"><a target="_blank" href="https://tool.oschina.net/uploads/apidocs/gson2.2.2/index.html?overview-summary.html" class="doc_href">Gson2.2.2</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Gtk+</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="H"></a>
+        <div class="SourcesOfAlpha" name="H">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">H</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html" class="doc_href">Hadoop</a></li>
+                                <li class="api_href"><a target="_blank" href="https://hibernate.org/orm/documentation/6.0/" class="doc_href">Hibernate 6.0官网</a></li>
+                                <li class="api_href"><a target="_blank" href="https://hibernate.net.cn/" class="doc_href">Hibernate 中文手册</a></li>
+                                <li class="api_href"><a target="_blank" href="http://htmlparser.sourceforge.net/javadoc/index.html" class="doc_href">HTMLParser</a></li>
+                                <li class="api_href"><a target="_blank" href="https://hc.apache.org/" class="doc_href">HttpClient</a></li>
+                                <li class="api_href"><a target="_blank" href="http://hutool.mydoc.io/" class="doc_href">Hutool API</a></li>
+								<li class="api_href"><a target="_blank" href="https://hbase.apache.org/book.html" class="doc_href">HBase</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="I"></a>
+        <div class="SourcesOfAlpha" name="I">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">I</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="https://tool.oschina.net/uploads/apidocs/ikanalyzer/index.html?overview-summary.html" class="doc_href">IKAnalyzer</a></li>
+                                <li class="api_href"><a target="_blank" href="https://tool.oschina.net/uploads/apidocs/ikexpression/index.html?overview-summary.html" class="doc_href">IK-Expression</a></li>
+								<li class="api_href"><a target="_blank" href="https://impala.apache.org/" class="doc_href">Impala官网</a></li>
+								<li class="api_href"><a target="_blank" href="https://www.w3cschool.cn/impala/" class="doc_href">Impala教程</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="J"></a>
+        <div class="SourcesOfAlpha" name="J">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">J</strong></td>
+                        <td>
+                            <ul>
+								<li class="api_href"><a target="_blank" href="https://www.w3school.com.cn/js/js_es6.asp" class="doc_href">JavaScript ES6</a></li>
+                                <li class="api_href"><a target="_blank" href="https://docs.oracle.com/javase/6/docs/api/" class="doc_href">J2SE 6.0</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.matools.com/api/java8" class="doc_href">J2SE 8.0中文版</a></li>
+                                <li class="api_href"><a target="_blank" href="https://docs.oracle.com/javase/8/docs/api/" class="doc_href">J2SE 8.0 官网API</a></li>
+                                <li class="api_href"><a target="_blank" href="https://docs.oracle.com/javase/10/docs/api/index.html?overview-summary.html" class="doc_href">J2SE 10 官网API</a></li>
+                                <li class="api_href"><a target="_blank" href="https://docs.oracle.com/en/java/javase/12/docs/api/" class="doc_href">J2SE 12 官网API</a></li>
+                                <li class="api_href"><a target="_blank" href="https://docs.oracle.com/en/java/javase/16/docs/api" class="doc_href">J2SE 16 官网API</a></li>
+
+                                <li class="api_href"><a target="_blank" href="/apidocs/apidoc?api=jackson-1.9.9" class="doc_href adisable">Jackson文档</a></li>
+                                <li class="api_href"><a target="_blank" href="/apidocs/apidoc?api=jactor-4.5.0" class="doc_href adisable">JActor 4.5.0</a></li>
+                                <li class="api_href"><a target="_blank" href="https://tool.oschina.net/uploads/apidocs/overview-summary.html" class="doc_href">Jedis2.1.0</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.eclipse.org/jetty/" class="doc_href">Jetty官网</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">JFinal</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.jfree.org/jfreechart/" class="doc_href">JFreeChart</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">JMathLib</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.runoob.com/manual/jquery/" class="doc_href">jQuery1.10.3.chm</a></li>
+                                <li class="api_href"><a target="_blank" href="https://jquery.cuishifeng.cn/" class="doc_href">jQuery API 3.5.1</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.jquery123.com/" class="doc_href">jQuery API 中文文档</a></li>
+                                <li class="api_href"><a target="_blank" href="https://jquery.com/" class="doc_href">jQuery 官网</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">JQuery-Mobile</a></li>
+                                <li class="api_href"><a target="_blank" href="http://json-lib.sourceforge.net/" class="doc_href">Json-lib</a></li>
+                                <li class="api_href"><a target="_blank" href="https://jsoup.org/apidocs/" class="doc_href">Jsoup</a></li>
+								<li class="api_href"><a target="_blank" href="https://m.runoob.com/jsp/jsp-jstl.html" class="doc_href">JSTL</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Junit4</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="K"></a>
+        <div class="SourcesOfAlpha" name="K">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">K</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="https://kafka.apache.org/documentation/" class="doc_href">Karaf</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Kyro-2.21</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="L"></a>
+        <div class="SourcesOfAlpha" name="L">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">L</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="https://lettuce.io/core/release/api/index.html" class="doc_href">lettuce6.1.8 API</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">LiftWeb-2.3</a></li>
+                                <li class="api_href"><a target="_blank" href="https://logging.apache.org/log4j/2.x/" class="doc_href">Log4j 2</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.yiibai.com/log4j" class="doc_href">Log4j中文手册</a></li>
+                                <li class="api_href"><a target="_blank" href="http://www.lua.org/start.html" class="doc_href">Lua官网</a> <a target="_blank" href="https://www.runoob.com/lua/lua-tutorial.html" class="doc_href">Lua教程</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Lucene 3.6</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Lucene 4.0</a></li>
+                                <li class="api_href"><a target="_blank" href="https://gitee.com/sentsin/layui?_from=gitee_search" class="doc_href">layerui</a></li>
+                                <!--<li class="api_href"><a target="_blank" href="https://gitee.com/ligerui/LigerUI?_from=gitee_search" class="doc_href">ligerui</a></li>-->
+								<li class="api_href"><a target="_blank" href="https://www.layuion.com/doc" class="doc_href">ligerui</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="M"></a>
+        <div class="SourcesOfAlpha" name="M">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">M</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">make手册</a></li>
+                                <li class="api_href"><a target="_blank" href="https://maven.apache.org/index.html" class="doc_href">Maven官网</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">MINA 2.0</a></li>
+                                <li class="api_href"><a target="_blank" href="https://mybatis.org/mybatis-3/zh_CN/index.html" class="doc_href">Mybatis-3 手册</a></li>
+								<li class="api_href"><a target="_blank" href="https://mybatis.org/spring/zh_CN/index.html" class="doc_href">Mybatis-spring</a></li>
+                                <li class="api_href"><a target="_blank" href="https://baomidou.com/pages/24112f/" class="doc_href">Mybatis-Plus 手册</a></li>
+								<li class="api_href"><a target="_blank" href="https://baomidou.com/" class="doc_href">Mybatis-Plus 官网</a></li>
+                                <li class="api_href"><a target="_blank" href="https://docs.oracle.com/cd/E17952_01/index.html" class="doc_href">MySQL官方文档</a></li>
+                                <li class="api_href"><a target="_blank" href="https://dev.mysql.com/doc/" class="doc_href">MySQL开发手册</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.php.cn/mysql/mysql-drop-tables.html" class="doc_href">MySQL中文手册教程</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.mysqlzh.com/" class="doc_href">MySQL 5.1中文文档</a></li>
+                                <li class="api_href"><a target="_blank" href="http://www.my97.net/" class="doc_href">My97 Date Picker</a></li>
+								<li class="api_href"><a target="_blank" href="https://www.runoob.com/markdown/md-tutorial.html" class="doc_href">Markdown教程</a></li>
+								<li class="api_href"><a target="_blank" href="https://www.jianshu.com/p/191d1e21f7ed/" class="doc_href">Markdown基本语法</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="N"></a>
+        <div class="SourcesOfAlpha" name="N">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">N</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="https://nutch.apache.org/documentation/" class="doc_href">Nutch2.0</a></li>
+                                <li class="api_href"><a target="_blank" href="https://netty.io/" class="doc_href">Netty</a></li>
+                                <li class="api_href"><a target="_blank" href="http://nginx.org/en/docs/" class="doc_href">Nginx 官网</a></li>
+                                <li class="api_href"><a target="_blank" href="http://nodejs.cn/api-v16/" class="doc_href">Node.js 16.15文档</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="O"></a>
+        <div class="SourcesOfAlpha" name="O">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">O</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="https://docs.oracle.com/en/database/oracle/oracle-database/index.html" class="doc_href">Oracle 官方文档</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">OpenFire</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">OpenJPA</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="P"></a>
+        <div class="SourcesOfAlpha" name="P">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">P</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Php中文文档</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Php英文文档</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">PhoneGap1.9</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Play1.2.5</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Play2_Java</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Play2_Scala</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">PostgreSQL9.1</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">POI-apache</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.python.org/" class="doc_href">Python3</a></li>
+                                <li class="api_href"><a target="_blank" href="https://wiki.python.org/moin/BeginnersGuideChinese" class="doc_href">Python3中文</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="Q"></a>
+        <div class="SourcesOfAlpha" name="Q">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">Q</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Qt4</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">QuickServer</a></li>
+								<li class="api_href"><a target="_blank" href="http://www.quartz-scheduler.org/documentation/" class="doc_href">Quartz</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="R"></a>
+        <div class="SourcesOfAlpha" name="R">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">R</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Rails</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Rhino</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Ruby-1.9</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Ruby-library</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="S"></a>
+        <div class="SourcesOfAlpha" name="S">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">S</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Scala2.9</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">ScalaTest</a></li>
+                                <li class="api_href"><a target="_blank" href="https://shiro.apache.org/documentation.html" class="doc_href">Shiro安全框架</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">SLF4J</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">SmartGwt</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Smarty3中文手册</a></li>
+                                <li class="api_href"><a target="_blank" href="https://spring.io/projects/spring-framework" class="doc_href">Spring 官网</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Spring for Android</a></li>
+                                <li class="api_href"><a target="_blank" href="https://docs.spring.io/spring-security/reference/index.html" class="doc_href">Spring Security 手册</a></li>
+                                <li class="api_href"><a target="_blank" href="https://solr.apache.org/resources.html" class="doc_href">Solr 官网</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Sqlite</a></li>
+                                <li class="api_href"><a target="_blank" href="https://struts.apache.org/getting-started/" class="doc_href">Struts 2.x教程</a></li>
+								<li class="api_href"><a target="_blank" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide" class="doc_href">JavaScript教程</a></li>
+								
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="T"></a>
+        <div class="SourcesOfAlpha" name="T">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">T</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Taperstry</a></li>
+                                <li class="api_href"><a target="_blank" href="https://tomcat.apache.org/" class="doc_href">Tomcat 官网</a></li>
+                                <li class="api_href"><a target="_blank" href="https://tomcat.apache.org/tomcat-10.0-doc/index.html" class="doc_href">Tomcat 文档</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="U"></a>
+        <div class="SourcesOfAlpha" name="U">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">U</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">UIMA</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="V"></a>
+        <div class="SourcesOfAlpha" name="V">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">V</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="https://cn.vuejs.org/v2/guide/" class="doc_href">VUE 2</a></li>
+                                <li class="api_href"><a target="_blank" href="https://v3.cn.vuejs.org/guide/introduction.html" class="doc_href">VUE 3</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Velocity 1.7</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">VelocityTools2.0</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="W"></a>
+        <div class="SourcesOfAlpha" name="W">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">W</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">WxWidgets</a></li>
+                                <li class="api_href"><a href="javascript:void(0);" class="doc_href adisable">Winpcap</a></li>
+                                <li class="api_href"><a target="_blank" href="https://developers.weixin.qq.com/miniprogram/dev/api/" class="doc_href">Wechat API</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="X"></a>
+        <div class="SourcesOfAlpha" name="X">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">X</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a TARGET="_blank" href="https://xerces.apache.org/" class="doc_href">Xerces2Java</a></li>
+                                <li class="api_href"><a TARGET="_blank" href="https://www.xuxueli.com/xxl-job/" class="doc_href">XXL-JOB</a></li>
+
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="Y"></a>
+        <div class="SourcesOfAlpha" name="Y">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">Y</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="https://clarle.github.io/yui3/" class="doc_href">YUI</a></li>
+								<li class="api_href"><a target="_blank" href="https://www.runoob.com/w3cnote/yaml-intro.html" class="doc_href">Yaml</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+        <a name="Z"></a>
+        <div class="SourcesOfAlpha" name="Z">
+                <table>
+                    <tr>
+                        <td style="width:80px;text-align:center;"><strong style="font-size:30pt;">Z</strong></td>
+                        <td>
+                            <ul>
+                                <li class="api_href"><a target="_blank" href="https://zookeeper.apache.org/doc/r3.8.0/apidocs/zookeeper-server/index.html" class="doc_href">zookeeper API</a></li>
+                                <li class="api_href"><a target="_blank" href="https://www.jyvtc.edu.cn/wm/uiFramework/js/zTree-v3.2/api/API_cn.html" class="doc_href">zTree v3.5.48文档</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+                <div class="clear"></div>
+            </div>
+    </div>
+	
+	<button id="topBtn" title="回顶部">返回顶部</button>
+</body>
+<script src="jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function (){
+        $(".alpha_index").click(function() {
+            $("div").removeClass("CurrentAlpha");
+            var alpha=$(this).html();
+            $(".SourcesOfAlpha[name="+alpha+"]").addClass("CurrentAlpha");
+        });
+		//tab switch
+		$(".tab-btn").on("click",function(){
+			$(".tab-btn").removeClass("active");
+			$(this).addClass("active");
+			var tabId = $(this).attr("data-tab");
+			$(".tab-pane").removeClass("active");
+			$("#"+tabId).addClass("active");
+		});
+		$(window).on("scroll",function(){
+            var display = window.pageYOffset > 100 ? "block" : "none";
+            $("#topBtn").css("display",display);
+        });
+        $("#topBtn").on("click",function(){
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+        }); 
+		
+		//baidu_transbtn
+		$("#baidu_transbtn").on("click",function(){
+			$("#transform").submit();
+		});
+		//youdao_transbtn
+		$("#youdao_transbtn").on("click",function(){
+			$("#transform").attr("action","https://www.youdao.com/result?lang=en");
+			
+			$("#transform #transtext").attr("name","word")
+			$("#transform").submit();
+			$("#transform").attr("action","https://fanyi.baidu.com/mtpe-individual/multimodal");
+			$("#transform #transtext").attr("name","query");
+		});
+		
+		//baidu_search
+		$("#baidu_search").on("click",function(){
+			$("#search_form").submit();
+		});
+		//biying_search
+		$("#biying_search").on("click",function(){
+			$("#search_form").attr("action","https://cn.bing.com/search");
+			
+			$("#search_form #search_field").attr("name","q")
+			$("#search_form").submit();
+			$("#search_form").attr("action","https://www.baidu.com/s");
+			$("#search_form #search_field").attr("name","wd");
+		});
+		
+    });
+	
+</script>
+</html>

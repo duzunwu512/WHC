@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="robots" content="all">
+    <meta name="referrer" content="always">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="keywords" content="base64编码,base64解码,base64在线解码,base64编码解码,base64加密解密">
+    <meta name="description" content="在线base64解码/编码工具是一个可以将字符串进行base64解码/编码的工具，使用javascript完成，简便快捷。">
+    <title>base64解码 base64编码 在线base64解码/编码工具 iP138在线工具</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/responsive.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../style/page.css" />
+    <script type="text/javascript" src="../jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="content">
+                <div class="mod-panel">
+                    <div class="hd">
+                        <h1>在线base64解码/编码工具</h1>
+                    </div>
+                    <div class="bd">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <form class="form-horizontal">
+                                    <div class="form-group clearfix">
+                                        <label class="col-md-2 control-label">转换内容：</label>
+                                        <div class="col-md-8">
+                                            <textarea id="input" class="form-control" style="height:150px;"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group clearfix">
+                                        <div class="col-md-8 col-md-offset-2">
+                                            <button id="encode" class="btn btn-primary" type="button">Base64编码</button>
+                                            <button id="decode" class="btn btn-primary" type="button">Base64解码</button>
+                                        </div>
+                                    </div>
+                                    <div class="form-group clearfix">
+                                        <label class="col-md-2 control-label">转换结果：</label>
+                                        <div class="col-md-8">
+                                            <textarea id="output" class="form-control" style="height:150px;"></textarea>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="tips">
+                                    <h4>Base64解码/编码说明</h4>
+                                    <ul>
+                                        <li>在线base64解码/编码工具是一个可以将字符串进行base64解码/编码的工具，使用javascript完成，简便快捷。</li>
+                                        <li>Base64编码要求把3个8位字节（3*8=24）转化为4个6位的字节（4*6=24），之后在6位的前面补两个0，形成8位一个字节的形式。
+                                            如果剩下的字符不足3个字节，则用0填充，输出字符使用'='，因此编码后输出的文本末尾可能会出现1或2个'='。</li>
+                                        <li>为了保证所输出的编码位可读字符，Base64制定了一个编码表，以便进行统一转换。编码表的大小为2^6=64，这也是Base64名称的由来。</li>
+                                        <li>通过本工具可以对代码进行Base64加密或者解密。Base64是网络上最常见的用于传输8Bit字节代码的编码方式之一。</li>
+                                        <li>Base64言下之意是一种基于64个可打印字符来表示二进制数据的表示方法!它是一种将二进制编码转换为可打印字符一种。它是MIME编码里面非常常见一种可逆转换二进制方法！现常用于电子邮件中，邮件类型声明如：Content-Transfer-Encoding:
+                                            base64 ！
+                                            由于2的6次方等于64，所以每6个位为一个单元，对应某个可打印字符。三个字节有24个位元，可以对应4个Base64单元，因此3个字节需要用4个base64单元来表示！如：MaN对应base64是：TW
+                                            Fu !
+                                            这64个可打印字符a-z,A-Z,0-9就占62字符，剩下2个字符不同系统可能使用不同，经常是:“+/”。base64编码后，文档大小为原先的4/3，里面所有字节（包括常见可打印字符）也编码了！
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript" src="https://cache.ip138.com/tool/lib/crypto/core-min.js"></script>
+            <script type="text/javascript" src="https://cache.ip138.com/tool/lib/crypto/enc-base64-min.js"></script>
+            <script type="text/javascript">
+                (function () {
+                    var $mod_panel = $('.mod-panel');
+                    var $input = $mod_panel.find('#input');
+                    var $output = $mod_panel.find('#output');
+                    $mod_panel.find('#encode').click(function () {
+                        var value = $input.val();
+                        var result = '';
+                        $output.val('');
+                        try {
+                            if (value) {
+                                result = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(value));
+                                $output.val(result);
+                            }
+                        } catch (e) {
+                            alert(e.message);
+                        }
+                    });
+                    $mod_panel.find('#decode').click(function () {
+                        var value = $input.val();
+                        var result = '';
+                        $output.val('');
+                        try {
+                            if (value) {
+                                value = value.split('\n');
+                                var words = '';
+                                for (var i = 0; i < value.length; i++) {
+                                    words = CryptoJS.enc.Base64.parse(value[i]);
+                                    result += words.toString(CryptoJS.enc.Utf8) + "\n";
+                                }
+                                $output.val(result);
+                            }
+                        } catch (e) {
+                            alert(e.message);
+                        }
+                    });
+                })();
+            </script>
+        </div>
+
+</body>
+
+</html>
